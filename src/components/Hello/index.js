@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import Hello from "./components/Hello"
-export default class App extends Component {
+
+export default class Hello extends Component {
     render() {
         return (
             <div>
-                <Hello />
+                <h2 className="title">hello，assault</h2>
             </div>
         )
     }
