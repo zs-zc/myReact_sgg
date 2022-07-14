@@ -1,4 +1,17 @@
-.myLi{
-    border: 1px solid #000;
-    margin:10px 0;
+.row{
+    border: 1px solid #ddd;
+    width: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+
+}
+.card{
+    margin: 10px;
+}
+.card-text{
+    width: 100px;
+    overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }

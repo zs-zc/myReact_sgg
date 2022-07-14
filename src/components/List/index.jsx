@@ -1,22 +1,23 @@
 import React, { Component } from 'react'
-import ProTypes from "prop-types"
-import Item from "../Item"
 import "./index.css"
 export default class List extends Component {
-    // 对接收的prps进行：类型，必要性的限制
-    static ProTypes = {
-        chengeIsSelect: ProTypes.func.isRequired,
-        deleteSelect: ProTypes.func.isRequired,
-        lists: ProTypes.array.isRequired
-    }
     render() {
-        let { lists, chengeIsSelect, deleteSelect } = this.props
         return (
-            <div className='myLi'>
-                {lists.map(item => {
-                    return <Item key={item.id} {...item} chengeIsSelect={chengeIsSelect} deleteSelect={deleteSelect} />
-                })}
+            <div className="row">
+                {
+                    this.props.showData.map(item => {
+                        return (
+                            <div className='card' key={item.id}>
+                                <a rel="noreferrer" href="https://github.com/reactjs" target="_blank">
+                                    <img src="https://avatars.githubusercontent.com/u/6412038?v=3" alt="pic" style={{ width: '100px' }} />
+                                </a>
+                                <p className='card-text'>{item.node_id}</p>
+                            </div>
+                        )
+                    })
+                }
             </div>
+
         )
     }
 }
