@@ -1,3 +1,6 @@
-.title{
-    background-color: skyblue;
+.main{
+    width: 500px;
+    border: 1px solid #999;
+    border-radius: 10px;
+    padding: 5px;
 }
