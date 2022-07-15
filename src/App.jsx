@@ -15,7 +15,7 @@ export default class App extends Component {
                     <Switch>
                         <Route path="/about" component={About} />
                         <Route path="/home" component={Home} />
-                        <Redirect to='/home' />
+                        <Redirect to='/about' />
                         {/* xxx  为演示，组件已删除 */}
                     </Switch>
                 </div>
