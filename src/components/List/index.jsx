@@ -1,8 +1,25 @@
 import React, { Component } from 'react'
+import PubSub from 'pubsub-js'
 import "./index.css"
 export default class List extends Component {
+    state = {
+        showData: [],
+        isFirst: true,
+        isLoading: false,
+        err: ''
+    }
+    componentDidMount() {
+        //   2
+        this.atguigu = PubSub.subscribe("atguigu", (_, stateObj) => {
+            this.setState(stateObj)
+        })
+        console.log(this.state, '000'); // 会先执行 1
+    }
+    componentWillUnmount() {
+        PubSub.unsubscribe(this.atguigu)
+    }
     render() {
-        const { showData, isFirst, isLoading, err } = this.props
+        const { showData, isFirst, isLoading, err } = this.state
         return (
             <div className="row">
                 {
