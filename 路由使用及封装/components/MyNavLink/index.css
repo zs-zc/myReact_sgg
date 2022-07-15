@@ -1,0 +1,8 @@
+.defaultDemo {
+    width: 200px;
+    height: 40px;
+    border: 1px solid #ddd;
+    line-height: 40px;
+    border-radius: 10px;
+    padding: 5px;
+}
