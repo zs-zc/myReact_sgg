@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
+import "./index.css"
 export default class MyNavLink extends Component {
     render() {
         return (
-            <NavLink {...this.props} />
+            <NavLink activeClassName='demo1' className="defaultDemo" {...this.props} />
         )
     }
 }

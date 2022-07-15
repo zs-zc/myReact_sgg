@@ -8,16 +8,15 @@ export default class App extends Component {
         return (
             <div>
                 <h2>router 跳转</h2>
-                <div>
-                    <MyNavLink to="/home" >Home</MyNavLink>
-                    <br />
-                    <MyNavLink to="/about" >About</MyNavLink>
+                <div >
+                    <MyNavLink to="/home" >Home</MyNavLink >
+                    <MyNavLink to="/about" style={{ marginLeft: '10px' }}>About</MyNavLink>
                 </div>
                 <div>
                     <Route path="/about" component={About} />
                     <Route path="/home" component={Home} />
                 </div>
-            </div>
+            </div >
 
         )
     }
