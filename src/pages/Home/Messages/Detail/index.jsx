@@ -24,14 +24,32 @@ export default class Detail extends Component {
     // }
     // -----------------------------------------------------
     // --------------------search----------------------------
+    // render() {
+    //     console.log(this.props);
+    //     const { search } = this.props.location
+    //     const { id, title } = qs.parse(search.slice(1))
+    //     console.log(id, title, '000');
+    //     const findResult = detailData.find(detailObj => {
+    //         return detailObj.id === id
+    //     })
+    //     return (
+    //         <div>
+    //             <ul>
+    //                 <li>ID:{id}</li>
+    //                 <li>TITLE:{title}</li>
+    //                 <li>content:{findResult.content}</li>
+    //             </ul>
+    //         </div>
+    //     )
+    // }
+    // ------------------------state------------------------------
     render() {
         console.log(this.props);
-        const { search } = this.props.location
-        const { id, title } = qs.parse(search.slice(1))
-        console.log(id, title, '000');
+        const { id, title } = this.props.location.state || {}
+        console.log(id, title);
         const findResult = detailData.find(detailObj => {
-            return detailObj.id === id
-        })
+            return detailObj.id === String(id)
+        }) || {}
         return (
             <div>
                 <ul>

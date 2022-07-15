@@ -29,7 +29,8 @@ export default class Messages extends Component {
                         message.map(item => {
                             return (
                                 // <Link key={item.id} to={`/home/messages/detail/${item.id}/${item.title}`}>{item.title}</Link> // params传参必须有接收
-                                <Link key={item.id} to={`/home/messages/detail?id=${item.id}&title=${item.title}`}>{item.title}</Link>  // search不能接收
+                                // <Link key={item.id} to={`/home/messages/detail?id=${item.id}&title=${item.title}`}>{item.title}</Link>  // search不能接收
+                                <Link key={item.id} to={{ pathname: "/home/messages/detail", state: { id: item.id, title: item.title } }}>{item.title}</Link>  // state传参，不能接收
                             )
                         })
                     }

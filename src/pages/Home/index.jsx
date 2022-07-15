@@ -14,7 +14,7 @@ export default class Home extends Component {
                     <Switch>
                         <Route path="/home/news" component={News}></Route>
                         <Route path="/home/messages" component={Messages}></Route>
-                        <Redirect to="/home/news" />
+                        {/* <Redirect to="/home/news" /> */}
                     </Switch>
                 </div>
             </div>
